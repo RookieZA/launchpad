@@ -4,20 +4,28 @@ A modern, responsive website built with Next.js that showcases my homelab projec
 
 ## 🚀 Features
 
-- **Homelab Showcase**: Interactive display of all my self-hosted services and tools
-- **Blog Platform**: Markdown-based blog posts with full content management
+- **Social Media Feed Interface**: Twitter/X-style timeline showcasing tech journey and homelab projects
+- **Interactive Homelab Showcase**: Detailed project cards with difficulty levels, costs, and resources
+- **Personal Tech Profile**: Professional profile section with experience highlights
+- **Dynamic Project Posts**: Individual posts for each homelab service with metadata and links
+- **GitHub Repository Integration**: Embedded GitHub project cards with direct links
 - **Responsive Design**: Optimized for desktop, tablet, and mobile devices
 - **Static Site Generation**: Fast loading times with Next.js SSG
 - **SEO Optimized**: Proper meta tags and structured data
 - **Accessible**: WCAG compliant design and navigation
+- **Real-time Style Updates**: Live interaction buttons and social media styling
 
 ## 🛠️ Tech Stack
 
 - **Framework**: Next.js 14 with TypeScript
-- **Styling**: Tailwind CSS with custom components
-- **Content**: Markdown files with gray-matter frontmatter
+- **Styling**: Tailwind CSS with custom components and responsive design
+- **Content**: Static homelab project data with markdown support via gray-matter
+- **Icons & UI**: Lucide React icons and custom SVG components
+- **Typography**: Tailwind Typography plugin for enhanced text rendering
+- **Date Handling**: date-fns for flexible date formatting
 - **Deployment**: Static export for easy hosting anywhere
-- **Build Tool**: Next.js built-in bundler
+- **Build Tool**: Next.js built-in bundler with PostCSS and Autoprefixer
+- **Development**: ESLint for code quality and hot reload for instant updates
 
 ## 📁 Project Structure
 
@@ -27,8 +35,7 @@ website/
 │   ├── components/          # React components
 │   │   ├── Header.tsx       # Site header and navigation
 │   │   ├── Footer.tsx       # Site footer with links
-│   │   ├── BlogPost.tsx     # Blog post display component
-│   │   └── HomelabShowcase.tsx # Interactive homelab grid
+│   │   └── BlogPost.tsx     # Blog post display component
 │   ├── pages/
 │   │   ├── _app.tsx         # Next.js app wrapper
 │   │   └── index.tsx        # Main homepage
@@ -37,13 +44,19 @@ website/
 │   ├── utils/
 │   │   └── posts.ts         # Blog post utilities
 │   └── types.ts             # TypeScript type definitions
-├── content/
-│   └── posts/               # Markdown blog posts
 ├── public/                  # Static assets
+│   └── favicon.svg          # Site favicon
+├── .next/                   # Next.js build output (generated)
+├── node_modules/            # Dependencies (generated)
 ├── package.json             # Dependencies and scripts
+├── package-lock.json        # Dependency lock file
 ├── next.config.js           # Next.js configuration
+├── next-env.d.ts            # Next.js TypeScript declarations
 ├── tailwind.config.js       # Tailwind CSS configuration
-└── tsconfig.json            # TypeScript configuration
+├── postcss.config.js        # PostCSS configuration
+├── tsconfig.json            # TypeScript configuration
+├── setup.sh                 # Setup script
+└── README.md                # Project documentation
 ```
 
 ## 🚦 Getting Started
@@ -71,6 +84,10 @@ website/
    ```
 
 4. **Open your browser** to `http://localhost:3000`
+
+   The application will start on port 3000 by default. You can access:
+   - **Main Feed**: `http://localhost:3000` - Social media style homepage
+   - **Development Tools**: Hot reload enabled for instant updates
 
 ### Building for Production
 
@@ -129,14 +146,24 @@ Your post content in Markdown format...
 
 ## 🏠 Homelab Showcase
 
-The homelab showcase is powered by a structured data file that includes:
+The homelab showcase is integrated directly into the social media feed on the main page (`src/pages/index.tsx`). Each project includes:
 
-- **Project Information**: Name, description, category
-- **Metadata**: Difficulty level, cost, purpose
-- **Resources**: Links to GitHub, documentation, demos
-- **Personal Notes**: Why I use it, key features
+### Current Homelab Stack
+- **Proxmox VE**: Virtualization platform for VMs and containers
+- **Cloudflare Tunnels**: Secure remote access without port forwarding  
+- **Coolify**: Self-hosted deployment platform (Heroku/Vercel alternative)
+- **Uptime Kuma**: Service uptime monitoring with notifications
+- **Supabase**: Self-hosted backend-as-a-service with PostgreSQL
+- **OpenWebUI**: Local LLM interface for private AI interactions
 
-To add a new homelab project, edit the `homelabProjects` array in `src/components/HomelabShowcase.tsx`.
+### Project Information Structure
+- **Basic Info**: Name, description, category, difficulty level
+- **Economics**: Cost analysis and value proposition
+- **Technical Details**: Purpose, key features, why I chose it
+- **Resources**: Direct links to GitHub, documentation, demos, websites
+- **Social Elements**: Tags, engagement metrics, and shareable format
+
+To add a new homelab project, edit the `homelabProjects` array in `src/pages/index.tsx` following the established data structure.
 
 ## 🎨 Customization
 
