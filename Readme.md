@@ -2,6 +2,13 @@
 
 A curated list of the software and services I personally use and recommend for building a powerful, local development and deployment environment. This list is aimed at tech individuals looking to get started with self-hosting and exploring the world of homelabbing.
 
+> 🌐 **Live Website**: [View the interactive version](https://launchpad.servr.co.za) hosted on my homelab infrastructure
+
+## 📱 Two Ways to Explore
+
+1. **📖 Documentation**: Continue reading this README for detailed project information
+2. **🌐 Interactive Website**: Visit the [live website](https://launchpad.servr.co.za) for a social media-style experience
+
 > 💡 **Note**: This page is a living document and will be updated as I explore new and exciting projects. This is linked from my LinkedIn profile to showcase the technologies I'm passionate about.
 
 ## 🚀 Quick Start
@@ -12,6 +19,18 @@ New to homelabbing? Start with these essentials:
 3. **Remote Access**: Set up [Cloudflare Tunnels](#cloudflare-tunnels) for secure external access
 4. **Monitoring**: Deploy [Uptime Kuma](#uptime-kuma) to monitor your services
 5. **Deploy Apps**: Use [Coolify](#coolify) for easy application deployment
+
+### 💻 Try the Interactive Website Locally
+
+```bash
+# Quick setup (requires Node.js 18+)
+./scripts/dev-setup.sh
+
+# Or manual setup
+cd website && npm install && npm run dev
+```
+
+Visit `http://localhost:3000` to explore the interactive version!
 
 ## 📋 Table of Contents
 
@@ -242,6 +261,40 @@ While not a self-hosted project, GitHub Copilot is an indispensable tool in my d
 - **Minimum**: Raspberry Pi 4 (4GB RAM) or equivalent
 - **Recommended**: Old desktop/laptop with 8GB+ RAM
 - **Enterprise**: Dedicated server hardware or cloud VPS
+
+## 🌐 Interactive Experience
+
+For a more engaging way to explore this homelab journey:
+
+- **🔗 Live Website**: [your-domain.com](https://your-domain.com)
+- **📱 Mobile-Friendly**: Optimized social media-style interface
+- **🎮 Interactive**: Click through projects, resources, and documentation
+
+## 🏗️ Website Technology
+
+The companion website is built with:
+- **Framework**: Next.js 14 with TypeScript
+- **Styling**: Tailwind CSS
+- **Deployment**: Self-hosted via [Coolify](https://coolify.io)
+- **Infrastructure**: Running on my Proxmox homelab
+
+### Local Development
+
+```bash
+cd website
+npm install
+npm run dev
+```
+
+Visit `http://localhost:3000` to see the website locally.
+
+### Deploy with Coolify
+
+1. **Repository**: Connect this GitHub repo to Coolify
+2. **Build Path**: Set to `website/`
+3. **Build Command**: `npm run build`
+4. **Output Directory**: `out/`
+5. **Environment**: Node.js 18+
 
 ---
 
