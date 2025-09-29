@@ -75,7 +75,7 @@ npm run build
 ### Initial Setup
 ```bash
 # Clone repository
-git clone https://github.com/username/launchpad.git
+git clone https://github.com/rookieza/launchpad.git
 cd launchpad
 
 # Quick development setup
