@@ -12,7 +12,7 @@ export default function Header() {
     { id: 'bookmarks', icon: Bookmark, label: 'Saved', href: '#' },
     { id: 'profile', icon: User, label: 'Profile', href: '#' },
   ];
-<script defer data-domain="launchpad.servr.co.za" src="https://plausible-tswscokgw4c8coo4kccwscww.servr.co.za/js/script.hash.outbound-links.js"></script>
+
   return (
     <div className="twitter-main-container">
       <div className="twitter-content">
