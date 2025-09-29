@@ -6,21 +6,34 @@ This document outlines the project structure and how different components work t
 
 ```
 localhost-launchpad/
-├── README.md                 # Main GitHub showcase
-├── .github/                  # GitHub workflows and templates
-│   └── workflows/
-│       └── deploy-website.yml
-├── scripts/                  # Deployment and setup scripts
-│   ├── deploy-coolify.sh     # Coolify deployment helper
-│   └── dev-setup.sh          # Local development setup
-├── assets/                   # Screenshots, diagrams, etc.
-└── website/                  # Next.js website application
-    ├── src/                  # Source code
-    ├── public/               # Static assets
-    ├── out/                  # Build output (generated)
-    ├── package.json          # Dependencies and scripts
-    ├── next.config.js        # Next.js configuration
-    └── tailwind.config.js    # Tailwind CSS configuration
+├── README.md                   # Main GitHub showcase
+├── PROJECT_STRUCTURE.md        # Project structure documentation
+├── assets/                     # Screenshots, diagrams, etc.
+└── website/                    # Next.js website application
+    ├── next-env.d.ts          # TypeScript declarations for Next.js
+    ├── next.config.js         # Next.js configuration
+    ├── package.json           # Dependencies and scripts
+    ├── postcss.config.js      # PostCSS configuration
+    ├── tailwind.config.js     # Tailwind CSS configuration
+    ├── tsconfig.json          # TypeScript configuration
+    ├── public/                # Static assets
+    │   └── favicon.svg        # Website favicon
+    └── src/                   # Source code
+        ├── types.ts           # TypeScript type definitions
+        ├── components/        # Reusable React components
+        │   ├── BlogPost.tsx   # Blog post display component
+        │   ├── Footer.tsx     # Website footer
+        │   ├── Header.tsx     # Website header
+        │   ├── HeroSection.tsx # Hero section component
+        │   ├── ModernCard.tsx # Card component
+        │   └── ThemeToggle.tsx # Dark/light theme toggle
+        ├── pages/             # Next.js page components
+        │   ├── _app.tsx       # App wrapper component
+        │   └── index.tsx      # Homepage
+        ├── styles/            # CSS styles
+        │   └── globals.css    # Global styles and theme
+        └── utils/             # Utility functions
+            └── posts.ts       # Blog post handling utilities
 ```
 
 ## 🚀 Deployment Options
@@ -45,7 +58,7 @@ localhost-launchpad/
 **Automatic Deployment:**
 - Push to `main` branch
 - GitHub Actions will build and deploy automatically
-- Available at: `https://username.github.io/launchpad`
+- Available at: `https://rookieza.github.io/launchpad`
 
 ### 3. Manual Deployment
 
