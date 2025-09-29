@@ -9,11 +9,6 @@ const nextConfig = {
   basePath: process.env.BASE_PATH || '',
   assetPrefix: process.env.ASSET_PREFIX || '',
   
-  // Optimize for static export
-  experimental: {
-    optimizeCss: true,
-  },
-  
   // Better error handling for production
   onDemandEntries: {
     maxInactiveAge: 25 * 1000,
