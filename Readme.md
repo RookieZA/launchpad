@@ -105,6 +105,31 @@ Coolify is an open-source and self-hostable alternative to Heroku, Netlify, and 
 
 **🔗 Resources**: [GitHub](https://github.com/coollabsio/coolify) | [Documentation](https://coolify.io/docs)
 
+---
+
+### n8n
+**🎯 Purpose**: Workflow automation platform  
+**💰 Cost**: Free (open-source) / Paid (cloud)  
+**⚡ Difficulty**: Beginner-friendly  
+
+n8n is a powerful, open-source workflow automation tool that allows you to connect different services and automate repetitive tasks. It's like Zapier but self-hosted, giving you complete control over your automation workflows.
+
+**Why I started with n8n**: 
+- Perfect entry point into self-hosting
+- Visual workflow builder makes automation accessible
+- Connects to hundreds of different services
+- Great for learning API integrations
+- Excellent documentation and community
+
+**Key Features**: 
+- Visual workflow editor
+- 400+ integrations
+- Custom code nodes for advanced logic
+- Webhook support for real-time triggers
+- Built-in credential management
+
+**🔗 Resources**: [GitHub](https://github.com/n8n-io/n8n) | [Documentation](https://docs.n8n.io/) | [Community](https://community.n8n.io/)
+
 ## 📊 Monitoring & Analytics
 *Keep track of your services and data*
 

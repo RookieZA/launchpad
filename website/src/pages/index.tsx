@@ -73,6 +73,30 @@ export default function Home({ posts }: HomeProps) {
       tags: ['deployment', 'devops', 'paas', 'automation']
     },
     {
+      id: 'n8n',
+      name: 'n8n',
+      description: 'Powerful workflow automation platform that started my self-hosting journey',
+      category: 'Automation',
+      difficulty: 'Beginner-friendly',
+      cost: 'Free (open-source)',
+      purpose: 'Workflow automation',
+      whyIUseIt: [
+        'Perfect entry point into self-hosting',
+        'Visual workflow builder makes automation accessible',
+        'Connects to hundreds of different services',
+        'Great for learning API integrations',
+        'Excellent documentation and community'
+      ],
+      resources: {
+        github: 'https://github.com/n8n-io/n8n',
+        docs: 'https://docs.n8n.io/',
+        community: 'https://community.n8n.io/'
+      },
+      tags: ['automation', 'workflows', 'api', 'integration', 'beginner'],
+      featured: true,
+      story: 'watch this space :D'
+    },
+    {
       id: 'uptime-kuma',
       name: 'Uptime Kuma',
       description: 'Beautiful and feature-rich monitoring solution for tracking service availability',
@@ -247,8 +271,15 @@ export default function Home({ posts }: HomeProps) {
 
             {/* Featured Projects */}
             {activeTab !== 'tutorials' && homelabProjects.map((project) => (
-              <article key={project.id} className="blog-card">
-                <h2 className="blog-title">{project.name}</h2>
+              <article key={project.id} className={`blog-card ${project.featured ? 'border-l-4 border-l-accent' : ''}`}>
+                <h2 className="blog-title">
+                  {project.name}
+                  {project.featured && (
+                    <span className="ml-2 text-sm px-2 py-1 bg-accent text-white rounded-full">
+                      Journey Start
+                    </span>
+                  )}
+                </h2>
                 <div className="blog-metadata">
                   <div className="flex items-center gap-2">
                     <span className="text-secondary">{project.category}</span>
@@ -258,6 +289,14 @@ export default function Home({ posts }: HomeProps) {
                 </div>
                 <div className="blog-content">
                   <p className="mb-6">{project.description}</p>
+                  
+                  {project.story && (
+                    <div className="mb-6 p-4 bg-surface rounded-lg border-l-4 border-l-primary">
+                      <h3 className="font-semibold mb-2 text-primary">My Journey:</h3>
+                      <p className="text-secondary italic">{project.story}</p>
+                    </div>
+                  )}
+                  
                   <div className="mb-6">
                     <h3 className="font-semibold mb-2">Why I use it:</h3>
                     <ul className="list-disc list-inside space-y-1 text-secondary">
