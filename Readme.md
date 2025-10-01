@@ -53,7 +53,7 @@ Proxmox Virtual Environment is a powerful, open-source hypervisor that allows yo
 - Built-in backup solutions
 - Clustering support
 - Comprehensive web-based management interface
-- no subcription repo
+- No subscription repo
 
 **🔗 Resources**: <a href="https://www.proxmox.com/en/proxmox-ve" target="_blank" rel="noopener noreferrer">Official Website</a> | <a href="https://pve.proxmox.com/wiki/Installation" target="_blank" rel="noopener noreferrer">Installation Guide</a> | <a href="https://pve.proxmox.com/pve-docs/pve-admin-guide.html#sysadmin_no_subscription_repo" target="u_blank" rel="noopener noreferrer">no subcription repo</a>
 
@@ -73,7 +73,7 @@ Cloudflare Tunnels create a secure, outbound-only connection between your local 
 - Includes Cloudflare's DDoS protection and caching
 - No need to configure firewall rules
 
-**🔗 Resources**: [Getting Started Guide](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/tunnel-guide/)
+**🔗 Resources**: [Getting Started Guide](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/)
 
 ## ⚙️ DevOps & Automation
 *Platform-as-a-Service tools for easy deployment*
