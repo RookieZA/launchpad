@@ -20,21 +20,8 @@ New to homelabbing? Start with these essentials:
 4. **Monitoring**: Deploy [Uptime Kuma](#uptime-kuma) to monitor your services
 5. **Deploy Apps**: Use [Coolify](#coolify) for easy application deployment
 
-### 💻 Try the Interactive Website Locally
-
-```bash
-# Quick setup (requires Node.js 18+)
-./scripts/dev-setup.sh
-
-# Or manual setup
-cd website && npm install && npm run dev
-```
-
-Visit `http://localhost:3000` to explore the interactive version!
-
 ## 📋 Table of Contents
 
-- [Quick Start](#-quick-start)
 - [Core Infrastructure](#-core-infrastructure)
 - [DevOps & Automation](#-devops--automation)
 - [Monitoring & Analytics](#-monitoring--analytics)
@@ -67,7 +54,7 @@ Proxmox Virtual Environment is a powerful, open-source hypervisor that allows yo
 - Clustering support
 - Comprehensive web-based management interface
 
-**🔗 Resources**: [Official Website](https://www.proxmox.com/en/proxmox-ve) | [Installation Guide](https://pve.proxmox.com/wiki/Installation)
+**🔗 Resources**: <a href="https://www.proxmox.com/en/proxmox-ve" target="_blank" rel="noopener noreferrer">Official Website</a> | <a href="https://pve.proxmox.com/wiki/Installation" target="_blank" rel="noopener noreferrer">Installation Guide</a>
 
 ---
 
