@@ -288,10 +288,11 @@ For a more engaging way to explore this homelab journey:
 ## 🏗️ Website Technology
 
 The companion website is built with:
-- **Framework**: Next.js 14 with TypeScript
+- **Framework**: Next.js 15 with TypeScript
 - **Styling**: Tailwind CSS
 - **Deployment**: Self-hosted via [Coolify](https://coolify.io)
 - **Infrastructure**: Running on my Proxmox homelab
+- **Security**: HTML sanitization with DOMPurify (see [SECURITY.md](SECURITY.md))
 
 ### Local Development
 
