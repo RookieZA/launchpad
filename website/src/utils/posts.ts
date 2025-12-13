@@ -2,13 +2,13 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import { remark } from 'remark'
-import html from 'remark-html'
+import remarkHtml from 'remark-html'
 import { BlogPostType } from '../types'
 
 const postsDirectory = path.join(process.cwd(), 'content/posts')
 
 async function markdownToHtml(markdown: string): Promise<string> {
-  const result = await remark().use(html).process(markdown)
+  const result = await remark().use(remarkHtml).process(markdown)
   return result.toString()
 }
 
