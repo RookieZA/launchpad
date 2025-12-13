@@ -1,5 +1,6 @@
 import { BlogPostType } from '../types'
 import { CalendarDays, Clock } from 'lucide-react'
+import DOMPurify from 'isomorphic-dompurify'
 
 interface BlogPostProps {
   post: BlogPostType
@@ -66,7 +67,7 @@ export default function BlogPost({ post, isPreview = false }: BlogPostProps) {
         ) : (
           <div 
             className="prose prose-lg dark:prose-invert max-w-none"
-            dangerouslySetInnerHTML={{ __html: content }}
+            dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(content) }}
           />
         )}
       </div>
