@@ -24,7 +24,7 @@ const ThemeToggle = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="twitter-button-secondary p-2"
+      className="p-2 rounded-full border border-color text-secondary hover-bg transition-colors"
       aria-label="Toggle theme"
     >
       {isDark ? <Sun size={20} /> : <Moon size={20} />}

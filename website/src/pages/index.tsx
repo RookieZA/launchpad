@@ -2,6 +2,7 @@ import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import { useState } from 'react'
 import BlogPost from '../components/BlogPost'
+import ThemeToggle from '../components/ThemeToggle'
 import { BlogPostType } from '../types'
 import { getAllPosts } from '../utils/posts'
 
@@ -227,6 +228,11 @@ export default function Home({ posts }: HomeProps) {
 
       <div className="main-container">
         <div className="content-wrapper">
+          {/* Top bar */}
+          <div className="flex justify-end mb-8">
+            <ThemeToggle />
+          </div>
+
           {/* Hero Section */}
           <header className="mb-16">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-heading">
@@ -346,8 +352,8 @@ export default function Home({ posts }: HomeProps) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const posts = getAllPosts()
-  
+  const posts = await getAllPosts()
+
   return {
     props: {
       posts,
